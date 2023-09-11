@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="{{bgcolor}}">
+    <a href="insert">Insert New Record</a>
+    <center>
+        {% include 'links.html'%}
+        <h1 bgcolor="blue" size="3" face="mistral">ShowData</h1><hr><hr>
+        <table border="6px" bgcolor="yellow" size="6">
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Action</th>
+                
+            </tr>
+            {% for record in data %}
+            <tr>
+                <td>{{record.name}}</td>
+                <td>{{record.mobile}}</td>
+                <td>{{record.address}}</td>
+                <td><a href="http://mail.google.com">{{record.email}}></td></a>
+                <td>
+                    <a href="delete/{{record.id}}">delete</a>
+                    <a href="update/{{record.id}}">update</a>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

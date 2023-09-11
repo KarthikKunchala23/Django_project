@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+</head>
+<body bgcolor="{{bgcolor1}}">
+    <center>
+        <h1 color="{{bgcolor2}}">KKR CONSTRUCTION LTD</h1><hr><br>
+        <h2 color="{{bgcolor}}">Application Form</h2>
+        <hr><hr>
+        <form action="save" method="POST">
+            {%csrf_token%}
+            Name:<input type="text" name="name"><br><br>
+            Mobile:<input type="text" name="mobile"><br><br>
+            Address:<input type="text" name="address"><br><br>
+            Email:<input type="text" name="email"><br><br>
+            <input type="submit" value="save"><br><br>
+        </form>
+    </center>
+</body>
+</html>

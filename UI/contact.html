@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body bgcolor="greenyellow">
+    {% include 'links.html' %}
+    <center>
+     <h1 color="white" size="4" face="mistral">Contact</h1>
+     <hr>
+     {% for key,addr in address.items %}
+     {{key}}:<br>
+     HOUSE NO:{{addr.HNO}}<br><br>
+     COLONY:{{addr.Colony}}<br><br>
+     PIN:{{addr.PIN}}<br><br>
+     CONTACT:{{addr.CONTACT}}<br><br>
+     <hr>
+     {% endfor %}
+    </center>
+</body>
+</html>
